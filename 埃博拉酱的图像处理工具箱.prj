@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.toolbox" plugin-version="1.0">
-  <configuration file="C:\Users\vhtmf\OneDrive - 翁悸会\MATLAB\图像处理\埃博拉酱的图像处理工具箱.prj" location="C:\Users\vhtmf\OneDrive - 翁悸会\MATLAB\图像处理" name="埃博拉酱的图像处理工具箱" target="target.toolbox" target-name="打包为工具箱">
+  <configuration build-checksum="3167202317" file="C:\Users\vhtmf\Documents\MATLAB\图像处理\埃博拉酱的图像处理工具箱.prj" location="C:\Users\vhtmf\Documents\MATLAB\图像处理" name="埃博拉酱的图像处理工具箱" target="target.toolbox" target-name="打包为工具箱">
     <param.appname>埃博拉酱的图像处理工具箱</param.appname>
     <param.authnamewatermark>埃博拉酱</param.authnamewatermark>
     <param.email>vhtmfu@outlook.com</param.email>
@@ -35,17 +35,11 @@ VideoPaths(:,1)string，可选，所有视频文件路径。默认打开文件�
 ## 返回值
 Masks(:,1)cell，每个视频的测量遮罩，每个元胞对应一个视频。元胞内是(:,:,:)logical，前两维是视频的高宽，第3维是不同的ROI。</param.description>
     <param.screenshot>${PROJECT_ROOT}\图形图像处理.png</param.screenshot>
-    <param.version>2.1.0</param.version>
+    <param.version>2.1.1</param.version>
     <param.output>${PROJECT_ROOT}\埃博拉酱的图像处理工具箱.mltbx</param.output>
-    <param.products.name>
-      <item>MATLAB</item>
-    </param.products.name>
-    <param.products.id>
-      <item>1</item>
-    </param.products.id>
-    <param.products.version>
-      <item>9.11</item>
-    </param.products.version>
+    <param.products.name />
+    <param.products.id />
+    <param.products.version />
     <param.platforms />
     <param.guid>6ed47641-adca-4155-9275-8dd7a76e6f85</param.guid>
     <param.exclude.filters>% List files contained in your toolbox folder that you would like to exclude
@@ -77,7 +71,7 @@ resources/project/*
     <param.apps />
     <param.registered.apps />
     <param.docs />
-    <param.getting.started.guide />
+    <param.getting.started.guide>${PROJECT_ROOT}\doc\GettingStarted.mlx</param.getting.started.guide>
     <param.matlabpath.excludes>
       <item>/D__/OneDrive - 翁悸会/MATLAB/MATLAB扩展</item>
     </param.matlabpath.excludes>
@@ -85,7 +79,7 @@ resources/project/*
     <param.exported.on.package>false</param.exported.on.package>
     <param.required.addons>
       <requiredaddons>
-        <requiredAddOn earliest="3.3.0" fromRepository="true" id="55b2e8d7-e4f3-4a7d-b01d-758acb6984a2" include="true" latest="latest">埃博拉酱 的 MATLAB 扩展 Extension</requiredAddOn>
+        <requiredAddOn downloadURL="https://ww2.mathworks.cn/matlabcentral/mlc-downloads/downloads/b344599a-983e-4a6c-bd99-ed3a1bdd9626/44438ce5-b213-4812-beea-72aa70295c17/packages/mltbx/MATLAB.Extension.mltbx" earliest="3.3.0" fromRepository="false" id="55b2e8d7-e4f3-4a7d-b01d-758acb6984a2" include="true" latest="latest">埃博拉酱 的 MATLAB 扩展 Extension</requiredAddOn>
       </requiredaddons>
     </param.required.addons>
     <param.matlab.project.id />
@@ -106,6 +100,9 @@ resources/project/*
     <unset>
       <param.company />
       <param.output />
+      <param.products.name />
+      <param.products.id />
+      <param.products.version />
       <param.platforms />
       <param.exclude.pcodedmfiles />
       <param.examples />
@@ -113,7 +110,6 @@ resources/project/*
       <param.apps />
       <param.registered.apps />
       <param.docs />
-      <param.getting.started.guide />
       <param.javaclasspath.excludes />
       <param.exported.on.package />
       <param.matlab.project.id />
@@ -134,6 +130,7 @@ resources/project/*
     </fileset.rootdir>
     <fileset.rootfiles>
       <file>${PROJECT_ROOT}\+ImageProcessing</file>
+      <file>${PROJECT_ROOT}\doc</file>
       <file>${PROJECT_ROOT}\README.md</file>
       <file>${PROJECT_ROOT}\resources</file>
       <file>${PROJECT_ROOT}\图形图像处理.png</file>
@@ -142,7 +139,7 @@ resources/project/*
     <fileset.depfun.excluded />
     <fileset.package />
     <build-deliverables>
-      <file location="${PROJECT_ROOT}" name="埃博拉酱的图像处理工具箱.mltbx" optional="false">C:\Users\vhtmf\OneDrive - 翁悸会\MATLAB\图像处理\埃博拉酱的图像处理工具箱.mltbx</file>
+      <file location="${PROJECT_ROOT}" name="埃博拉酱的图像处理工具箱.mltbx" optional="false">C:\Users\vhtmf\Documents\MATLAB\图像处理\埃博拉酱的图像处理工具箱.mltbx</file>
     </build-deliverables>
     <workflow />
     <matlab>
