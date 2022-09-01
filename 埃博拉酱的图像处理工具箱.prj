@@ -3,7 +3,7 @@
     <param.appname>埃博拉酱的图像处理工具箱</param.appname>
     <param.authnamewatermark>埃博拉酱</param.authnamewatermark>
     <param.email>vhtmfu@outlook.com</param.email>
-    <param.company />
+    <param.company>一致行动党</param.company>
     <param.summary>内置imwarp的升级版，支持3D图像批量变换</param.summary>
     <param.description>埃博拉酱的图像处理工具包，提供一系列MATLAB Image Processing Toolbox内置函数所欠缺，但却常用的图像处理功能。依赖埃博拉酱的MATLAB扩展
 
@@ -13,11 +13,17 @@
 ImWarp 内置imwarp的升级版，支持3D图像批量变换
 函数文件内有详细文档，可用doc命令查看。</param.description>
     <param.screenshot>${PROJECT_ROOT}\图形图像处理.png</param.screenshot>
-    <param.version>3.0.0</param.version>
+    <param.version>3.0.1</param.version>
     <param.output>${PROJECT_ROOT}\埃博拉酱的图像处理工具箱.mltbx</param.output>
-    <param.products.name />
-    <param.products.id />
-    <param.products.version />
+    <param.products.name>
+      <item>Image Processing Toolbox</item>
+    </param.products.name>
+    <param.products.id>
+      <item>17</item>
+    </param.products.id>
+    <param.products.version>
+      <item>11.6</item>
+    </param.products.version>
     <param.platforms />
     <param.guid>6ed47641-adca-4155-9275-8dd7a76e6f85</param.guid>
     <param.exclude.filters>% List files contained in your toolbox folder that you would like to exclude
@@ -75,11 +81,7 @@ resources/project
     <param.additional.sw.mac.url />
     <param.additional.sw.linux.url />
     <unset>
-      <param.company />
       <param.output />
-      <param.products.name />
-      <param.products.id />
-      <param.products.version />
       <param.platforms />
       <param.exclude.pcodedmfiles />
       <param.examples />
