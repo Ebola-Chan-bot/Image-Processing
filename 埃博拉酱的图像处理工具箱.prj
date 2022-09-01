@@ -4,38 +4,16 @@
     <param.authnamewatermark>埃博拉酱</param.authnamewatermark>
     <param.email>vhtmfu@outlook.com</param.email>
     <param.company />
-    <param.summary>从视频预览图中选取ROI，然后逐帧测量其中的平均像素值</param.summary>
-    <param.description>埃博拉酱的图像处理工具包，提供一系列MATLAB Image Processing Toolbox内置函数所欠缺，但却常用的图像处理功能。依赖[埃博拉酱的MATLAB扩展](https://ww2.mathworks.cn/matlabcentral/fileexchange/96344-matlab-extension)
+    <param.summary>内置imwarp的升级版，支持3D图像批量变换</param.summary>
+    <param.description>埃博拉酱的图像处理工具包，提供一系列MATLAB Image Processing Toolbox内置函数所欠缺，但却常用的图像处理功能。依赖埃博拉酱的MATLAB扩展
 
-本项目的发布版本号遵循[语义化版本](https://semver.org/lang/zh-CN/)规范。开发者认为这是一个优秀的规范，并向每一位开发者推荐遵守此规范。
-# 目录
+目录
 本包中所有函数均在ImageProcessing命名空间下，使用前需import。使用命名空间是一个好习惯，可以有效防止命名冲突，避免编码时不必要的代码提示干扰。
-- [VideoBatchMeasure](#VideoBatchMeasure) 根据ROI批量测量视频像素值
-- [VideoDrawROI](#VideoDraoROI) 给视频画ROI用于测量
-# VideoBatchMeasure
-根据ROI批量测量视频像素值
-## 输入参数
-Flags(1,1)string，重复，可选设置以下功能旗帜：
-- Gpu，使用GPU加速计算
-- Verbose，输出进度信息
-- Parallel，使用并行计算。如果还指定了Gpu，将只在一个进程中使用GPU，其他进程仍使用CPU。
 
-VideoPaths(:,1)string，名称值，视频路径，默认打开文件选择对话框要求用户手动选择
-
-Masks(:,1)cell，名称值，测量遮罩。默认调用ImageProcessing.VideoDraoROI要求用户手动绘制。
-## 返回值
-Measurements(:,1)cell，每个元胞对应一个视频，元胞内是(:,:)single，第1维ROI，第2维时间帧，每个数值代表该ROI内所有像素在该时间帧内的平均值
-Masks(:,1)cell，同输入参数中的Masks。如果你的遮罩是临时手绘的，可以用这个返回值取得遮罩。
-# VideoDrawROI
-给视频画ROI用于测量
-## 输入参数
-NoROIs(1,1)uint8，必需，每个视频要画多少个ROI
-
-VideoPaths(:,1)string，可选，所有视频文件路径。默认打开文件选择对话框要求用户手动选择
-## 返回值
-Masks(:,1)cell，每个视频的测量遮罩，每个元胞对应一个视频。元胞内是(:,:,:)logical，前两维是视频的高宽，第3维是不同的ROI。</param.description>
+ImWarp 内置imwarp的升级版，支持3D图像批量变换
+函数文件内有详细文档，可用doc命令查看。</param.description>
     <param.screenshot>${PROJECT_ROOT}\图形图像处理.png</param.screenshot>
-    <param.version>2.1.1</param.version>
+    <param.version>3.0.0</param.version>
     <param.output>${PROJECT_ROOT}\埃博拉酱的图像处理工具箱.mltbx</param.output>
     <param.products.name />
     <param.products.id />
@@ -84,7 +62,7 @@ resources/project/*
     </param.required.addons>
     <param.matlab.project.id />
     <param.matlab.project.name />
-    <param.release.start>R2021b</param.release.start>
+    <param.release.start>R2022b</param.release.start>
     <param.release.end>latest</param.release.end>
     <param.release.current.only>false</param.release.current.only>
     <param.compatiblity.windows>true</param.compatiblity.windows>
@@ -130,7 +108,6 @@ resources/project/*
     </fileset.rootdir>
     <fileset.rootfiles>
       <file>${PROJECT_ROOT}\+ImageProcessing</file>
-      <file>${PROJECT_ROOT}\doc</file>
       <file>${PROJECT_ROOT}\README.md</file>
       <file>${PROJECT_ROOT}\resources</file>
       <file>${PROJECT_ROOT}\图形图像处理.png</file>
@@ -143,7 +120,7 @@ resources/project/*
     </build-deliverables>
     <workflow />
     <matlab>
-      <root>C:\Program Files\MATLAB\R2021b</root>
+      <root>C:\Program Files\MATLAB\R2022b</root>
       <toolboxes />
     </matlab>
     <platform>

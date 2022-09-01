@@ -1,0 +1,214 @@
+{
+	"ImageProcessing.ImWarp": {
+		"inputs": [
+			{
+				"mutuallyExclusiveGroup": [
+					[
+						{
+							"name": "A",
+							"kind": "required",
+							"type": [
+								[
+									"numeric"
+								],
+								[
+									"logical"
+								]
+							]
+						},
+						{
+							"name": "RA",
+							"kind": "ordered",
+							"type": [
+								[
+									"imref2d"
+								],
+								[
+									"imref3d"
+								]
+							]
+						},
+						{
+							"name": "TFORM",
+							"kind": "required",
+							"type": [
+								[
+									"affinetform2d"
+								],
+								[
+									"affinetform3d"
+								],
+								[
+									"affine2d"
+								],
+								[
+									"affine3d"
+								],
+								[
+									"geometricTransform2d"
+								],
+								[
+									"geometricTransform3d"
+								],
+								[
+									"projective2d"
+								],
+								[
+									"rigid2d"
+								],
+								[
+									"rigid3d"
+								],
+								[
+									"images.geotrans.PiecewiseLinearTransformation2D"
+								],
+								[
+									"images.geotrans.PolynomialTransformation2D"
+								],
+								[
+									"images.geotrans.LocalWeightedMeanTransformation2D"
+								],
+								[
+									"numeric",
+									"size=:,:,2"
+								],
+								[
+									"numeric",
+									"size=:,:,:,3"
+								]
+							]
+						},
+						{
+							"name": "INTERP",
+							"kind": "ordered",
+							"type": "choices={'nearest', 'linear', 'cubic'}"
+						},
+						{
+							"name": "OutputView",
+							"kind": "namevalue",
+							"type": [
+								[
+									"imref2d"
+								],
+								[
+									"imref3d"
+								]
+							]
+						},
+						{
+							"name": "FillValues",
+							"kind": "namevalue",
+							"type": "numeric"
+						},
+						{
+							"name": "SmoothEdges",
+							"kind": "namevalue",
+							"type": [
+								"logical",
+								"scalar"
+							]
+						}
+					],
+					[
+						{
+							"name": "A",
+							"kind": "required",
+							"type": "categorical"
+						},
+						{
+							"name": "RA",
+							"kind": "ordered",
+							"type": [
+								[
+									"imref2d"
+								],
+								[
+									"imref3d"
+								]
+							]
+						},
+						{
+							"name": "TFORM",
+							"kind": "ordered",
+							"type": [
+								[
+									"affinetform2d"
+								],
+								[
+									"affinetform3d"
+								],
+								[
+									"affine2d"
+								],
+								[
+									"affine3d"
+								],
+								[
+									"geometricTransform2d"
+								],
+								[
+									"geometricTransform3d"
+								],
+								[
+									"projective2d"
+								],
+								[
+									"rigid2d"
+								],
+								[
+									"rigid3d"
+								],
+								[
+									"images.geotrans.PiecewiseLinearTransformation2D"
+								],
+								[
+									"images.geotrans.PolynomialTransformation2D"
+								],
+								[
+									"images.geotrans.LocalWeightedMeanTransformation2D"
+								]
+							]
+						},
+						{
+							"name": "INTERP",
+							"kind": "ordered",
+							"type": "choices={'nearest'}"
+						},
+						{
+							"name": "OutputView",
+							"kind": "namevalue",
+							"type": [
+								[
+									"imref2d"
+								],
+								[
+									"imref3d"
+								]
+							]
+						},
+						{
+							"name": "FillValues",
+							"kind": "namevalue",
+							"type": "missing"
+						},
+						{
+							"name": "SmoothEdges",
+							"kind": "namevalue",
+							"type": [
+								"logical",
+								"scalar"
+							]
+						}
+					]
+				]
+			}
+		]
+	},
+	"ImageProcessing.VideoBatchMeasure":{
+		"inputs":[
+			{
+				"name"
+			}
+		]
+	}
+}
