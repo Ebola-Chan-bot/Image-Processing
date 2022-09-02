@@ -13,7 +13,7 @@
 ImWarp 内置imwarp的升级版，支持3D图像批量变换
 函数文件内有详细文档，可用doc命令查看。</param.description>
     <param.screenshot>${PROJECT_ROOT}\图形图像处理.png</param.screenshot>
-    <param.version>3.0.1</param.version>
+    <param.version>3.0.2</param.version>
     <param.output>${PROJECT_ROOT}\埃博拉酱的图像处理工具箱.mltbx</param.output>
     <param.products.name>
       <item>Image Processing Toolbox</item>
@@ -61,9 +61,7 @@ resources/project
     <param.javaclasspath.excludes />
     <param.exported.on.package>false</param.exported.on.package>
     <param.required.addons>
-      <requiredaddons>
-        <requiredAddOn downloadURL="https://ww2.mathworks.cn/matlabcentral/mlc-downloads/downloads/b344599a-983e-4a6c-bd99-ed3a1bdd9626/44438ce5-b213-4812-beea-72aa70295c17/packages/mltbx/MATLAB.Extension.mltbx" earliest="3.3.0" fromRepository="false" id="55b2e8d7-e4f3-4a7d-b01d-758acb6984a2" include="true" latest="latest">埃博拉酱 的 MATLAB 扩展 Extension</requiredAddOn>
-      </requiredaddons>
+      <requiredaddons />
     </param.required.addons>
     <param.matlab.project.id />
     <param.matlab.project.name />

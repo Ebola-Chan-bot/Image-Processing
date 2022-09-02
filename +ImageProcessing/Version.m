@@ -1,4 +1,3 @@
 function V = Version
-V.Me='3.0.1';
-V.MatlabExtension=MATLAB.Version;
+V.Me='3.0.2';
 V.MATLAB='R2022b';
