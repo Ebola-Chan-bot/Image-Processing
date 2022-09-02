@@ -13,7 +13,7 @@
 ImWarp 内置imwarp的升级版，支持3D图像批量变换
 函数文件内有详细文档，可用doc命令查看。</param.description>
     <param.screenshot>${PROJECT_ROOT}\图形图像处理.png</param.screenshot>
-    <param.version>3.0.2</param.version>
+    <param.version>3.0.1</param.version>
     <param.output>${PROJECT_ROOT}\埃博拉酱的图像处理工具箱.mltbx</param.output>
     <param.products.name>
       <item>Image Processing Toolbox</item>
