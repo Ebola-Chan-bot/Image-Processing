@@ -203,12 +203,5 @@
 				]
 			}
 		]
-	},
-	"ImageProcessing.VideoBatchMeasure":{
-		"inputs":[
-			{
-				"name"
-			}
-		]
 	}
 }
