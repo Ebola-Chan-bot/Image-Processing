@@ -203,5 +203,41 @@
 				]
 			}
 		]
+	},
+	"ImageProcessing.NormXCorr2": {
+		"inputs": [
+			{
+				"name": "template",
+				"kind": "required",
+				"type": [
+					[
+						"real"
+					],
+					[
+						"logical"
+					]
+				]
+			},
+			{
+				"name": "A",
+				"kind": "required",
+				"type": [
+					[
+						"numeric"
+					],
+					[
+						"logical"
+					]
+				]
+			}
+		],
+		"outputs": [
+			{
+				"name": "C",
+				"type": [
+					"double"
+				]
+			}
+		]
 	}
 }

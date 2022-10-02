@@ -1,19 +1,23 @@
 <deployment-project plugin="plugin.toolbox" plugin-version="1.0">
-  <configuration build-checksum="3167202317" file="C:\Users\vhtmf\Documents\MATLAB\图像处理\埃博拉酱的图像处理工具箱.prj" location="C:\Users\vhtmf\Documents\MATLAB\图像处理" name="埃博拉酱的图像处理工具箱" target="target.toolbox" target-name="打包为工具箱">
+  <configuration build-checksum="3167202317" file="C:\Users\张天夫\Documents\MATLAB\图像处理\埃博拉酱的图像处理工具箱.prj" location="C:\Users\张天夫\Documents\MATLAB\图像处理" name="埃博拉酱的图像处理工具箱" target="target.toolbox" target-name="打包为工具箱">
     <param.appname>埃博拉酱的图像处理工具箱</param.appname>
     <param.authnamewatermark>埃博拉酱</param.authnamewatermark>
     <param.email>vhtmfu@outlook.com</param.email>
     <param.company>一致行动党</param.company>
     <param.summary>内置imwarp的升级版，支持3D图像批量变换</param.summary>
-    <param.description>埃博拉酱的图像处理工具包，提供一系列MATLAB Image Processing Toolbox内置函数所欠缺，但却常用的图像处理功能。依赖埃博拉酱的MATLAB扩展
+    <param.description>埃博拉酱的图像处理工具包，提供一系列MATLAB Image Processing Toolbox内置函数所欠缺，但却常用的图像处理功能。
 
-目录
 本包中所有函数均在ImageProcessing命名空间下，使用前需import。使用命名空间是一个好习惯，可以有效防止命名冲突，避免编码时不必要的代码提示干扰。
 
-ImWarp 内置imwarp的升级版，支持3D图像批量变换
-函数文件内有详细文档，可用doc命令查看。</param.description>
+import ImageProcessing.*
+函数文件内有详细文档，可用doc命令查看。
+
+%内置imwarp的升级版，支持3D图像批量变换
+function varargout=ImWarp(Image,varargin)
+%内置normxcorr2的升级版，支持多图批量操作
+function C=NormXCorr2(template,A)</param.description>
     <param.screenshot>${PROJECT_ROOT}\图形图像处理.png</param.screenshot>
-    <param.version>3.0.1</param.version>
+    <param.version>3.1.0</param.version>
     <param.output>${PROJECT_ROOT}\埃博拉酱的图像处理工具箱.mltbx</param.output>
     <param.products.name>
       <item>Image Processing Toolbox</item>
@@ -65,7 +69,7 @@ resources/project
     </param.required.addons>
     <param.matlab.project.id />
     <param.matlab.project.name />
-    <param.release.start>R2022b</param.release.start>
+    <param.release.start>R2021b</param.release.start>
     <param.release.end>latest</param.release.end>
     <param.release.current.only>false</param.release.current.only>
     <param.compatiblity.windows>true</param.compatiblity.windows>
@@ -107,6 +111,7 @@ resources/project
     </fileset.rootdir>
     <fileset.rootfiles>
       <file>${PROJECT_ROOT}\+ImageProcessing</file>
+      <file>${PROJECT_ROOT}\doc</file>
       <file>${PROJECT_ROOT}\README.md</file>
       <file>${PROJECT_ROOT}\resources</file>
       <file>${PROJECT_ROOT}\图形图像处理.png</file>
@@ -115,7 +120,7 @@ resources/project
     <fileset.depfun.excluded />
     <fileset.package />
     <build-deliverables>
-      <file location="${PROJECT_ROOT}" name="埃博拉酱的图像处理工具箱.mltbx" optional="false">C:\Users\vhtmf\Documents\MATLAB\图像处理\埃博拉酱的图像处理工具箱.mltbx</file>
+      <file location="${PROJECT_ROOT}" name="埃博拉酱的图像处理工具箱.mltbx" optional="false">C:\Users\张天夫\Documents\MATLAB\图像处理\埃博拉酱的图像处理工具箱.mltbx</file>
     </build-deliverables>
     <workflow />
     <matlab>
