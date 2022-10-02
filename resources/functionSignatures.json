@@ -239,5 +239,52 @@
 				]
 			}
 		]
+	},
+	"ImageProcessing.Nxc2APostProcess": {
+		"inputs": [
+			{
+				"name": "A",
+				"kind": "required",
+				"type": "real",
+				"purpose": "计算NormXCorr2的目标图像"
+			},
+			{
+				"name": "SizeT",
+				"kind": "required",
+				"type": [
+					"size=1:2",
+					"real"
+				],
+				"purpose": "模板图的尺寸"
+			},
+			{
+				"name": "FDN",
+				"kind": "required",
+				"type": [
+					"struct",
+					"scalar"
+				],
+				"purpose": "Nxc2TPreprocess的预处理结果"
+			}
+		]
+	},
+	"ImageProcessing.Nxc2TPreprocess": {
+		"inputs": [
+			{
+				"name": "Template",
+				"kind": "required",
+				"type": "real",
+				"purpose": "适用于NormXCorr2的模板图。"
+			},
+			{
+				"name": "SizeA",
+				"kind": "required",
+				"type": [
+					"size=1:2",
+					"real"
+				],
+				"purpose": "目标图像尺寸。"
+			}
+		]
 	}
 }

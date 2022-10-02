@@ -10,4 +10,8 @@ import ImageProcessing.*
 function varargout=ImWarp(Image,varargin)
 %内置normxcorr2的升级版，支持多图批量操作
 function C=NormXCorr2(template,A)
+%对NormXCorr2的模板进行预处理
+function FDN = Nxc2TPreprocess(Template,SizeA)
+%使用Nxc2TPreprocess的预处理结果计算NormXCorr2
+function C = Nxc2APostprocess(A,SizeT,FDN)
 ```

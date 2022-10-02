@@ -5,7 +5,7 @@
     <param.email>vhtmfu@outlook.com</param.email>
     <param.company>一致行动党</param.company>
     <param.summary>内置图像处理工具箱函数对多图批量处理支持较差。本工具箱致力于对常用图像处理函数进行批量化增强。</param.summary>
-    <param.description>埃博拉酱的图像处理工具箱，提供一系列MATLAB Image Processing Toolbox内置函数所欠缺，但却常用的图像处理功能。
+    <param.description>埃博拉酱的图像处理工具包，提供一系列MATLAB Image Processing Toolbox内置函数所欠缺，但却常用的图像处理功能。
 
 本包中所有函数均在ImageProcessing命名空间下，使用前需import。使用命名空间是一个好习惯，可以有效防止命名冲突，避免编码时不必要的代码提示干扰。
 
@@ -15,9 +15,13 @@ import ImageProcessing.*
 %内置imwarp的升级版，支持3D图像批量变换
 function varargout=ImWarp(Image,varargin)
 %内置normxcorr2的升级版，支持多图批量操作
-function C=NormXCorr2(template,A)</param.description>
+function C=NormXCorr2(template,A)
+%对NormXCorr2的模板进行预处理
+function FDN = Nxc2TPreprocess(Template,SizeA)
+%使用Nxc2TPreprocess的预处理结果计算NormXCorr2
+function C = Nxc2APostprocess(A,SizeT,FDN)</param.description>
     <param.screenshot>${PROJECT_ROOT}\图形图像处理.png</param.screenshot>
-    <param.version>3.1.0</param.version>
+    <param.version>3.2.0</param.version>
     <param.output>${PROJECT_ROOT}\埃博拉酱的图像处理工具箱.mltbx</param.output>
     <param.products.name>
       <item>Image Processing Toolbox</item>

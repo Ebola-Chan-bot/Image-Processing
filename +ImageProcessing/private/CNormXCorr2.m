@@ -1,6 +1,6 @@
-function C = CNormXCorr2(T,A)
-A = shiftData(A);
-T = shiftData(T);
+function C = CNormXCorr2(T,A,Radius)
+A = ShiftData(A);
+T = ShiftData(T);
 [m,n] = size(T,1,2);
 [p,q] = size(A,1,2);
 R = m+p-1;
@@ -24,8 +24,8 @@ else
 	end
 end
 mn = m*n;
-local_sum_A = local_sum(A,m,n);
-denom = sqrt(mn-1)*std(T,0,1:2).*sqrt( max( local_sum(A.*A,m,n) - (local_sum_A.^2)/mn,0) );
+local_sum_A = LocalSum(A,m,n);
+denom = sqrt(mn-1)*std(T,0,1:2).*sqrt( max( LocalSum(A.*A,m,n) - (local_sum_A.^2)/mn,0) );
 numerator = (xcorr_TA - local_sum_A.*sum(T,1:2)/mn );
 if CTM
 	C = zeros(size(numerator));
@@ -38,16 +38,3 @@ C( ( abs(C) - 1 ) > sqrt(eps(1)) ) = 0;
 if ~CTM
 	C = real(C);
 end
-function local_sum_A = local_sum(A,m,n)
-local_sum_A = cumsum(padarray(A,[m n]),1);
-local_sum_A = cumsum(local_sum_A(1+m:end-1,:,:)-local_sum_A(1:end-m-1,:,:),2);
-local_sum_A = local_sum_A(:,1+n:end-1,:)-local_sum_A(:,1:end-n-1,:);
-local_sum_A=reshape(local_sum_A,[size(local_sum_A,1:2),size(A,3:ndims(A))]);
-function A = shiftData(A)
-if ~(isa(A,'uint8') || isa(A,'uint16') || isa(A,'uint32'))
-	min_A = min(A(:));
-	if min_A < 0
-		A = A - min_A;
-	end
-end
-A=double(A);
