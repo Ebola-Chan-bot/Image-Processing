@@ -252,7 +252,7 @@
 				"name": "SizeT",
 				"kind": "required",
 				"type": [
-					"size=1:2",
+					"size=1,2",
 					"real"
 				],
 				"purpose": "模板图的尺寸"
@@ -280,7 +280,7 @@
 				"name": "SizeA",
 				"kind": "required",
 				"type": [
-					"size=1:2",
+					"size=1,2",
 					"real"
 				],
 				"purpose": "目标图像尺寸。"
