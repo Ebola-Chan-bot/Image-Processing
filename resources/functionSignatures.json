@@ -207,7 +207,7 @@
 	"ImageProcessing.NormXCorr2": {
 		"inputs": [
 			{
-				"name": "template",
+				"name": "Template",
 				"kind": "required",
 				"type": [
 					[
@@ -229,6 +229,15 @@
 						"logical"
 					]
 				]
+			},
+			{
+				"name": "Partial",
+				"kind": "ordered",
+				"type": [
+					"size=1,2",
+					"cell"
+				],
+				"purpose": "指定生成互相关矩阵的一部分"
 			}
 		],
 		"outputs": [
@@ -265,6 +274,15 @@
 					"scalar"
 				],
 				"purpose": "Nxc2TPreprocess的预处理结果"
+			},
+			{
+				"name": "Partial",
+				"kind": "ordered",
+				"type": [
+					"size=1,2",
+					"cell"
+				],
+				"purpose": "指定生成互相关矩阵的一部分"
 			}
 		]
 	},
