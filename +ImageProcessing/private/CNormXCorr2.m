@@ -1,4 +1,4 @@
-function C = CNormXCorr2(T,A,Radius)
+function C = CNormXCorr2(T,A,Partial)
 A = ShiftData(A);
 T = ShiftData(T);
 [m,n] = size(T,1,2);
@@ -25,7 +25,14 @@ else
 end
 mn = m*n;
 local_sum_A = LocalSum(A,m,n);
-denom = sqrt(mn-1)*std(T,0,1:2).*sqrt( max( LocalSum(A.*A,m,n) - (local_sum_A.^2)/mn,0) );
+local_sum_A2=LocalSum(A.*A,m,n);
+if exist('Partial','var')
+	Partial=[Partial,repmat({':'},1,ndims(xcorr_TA)-2)];
+	local_sum_A=local_sum_A(Partial{:});
+	local_sum_A2=local_sum_A2(Partial{:});
+	xcorr_TA=xcorr_TA(Partial{:});
+end
+denom = sqrt(mn-1)*std(T,0,1:2).*sqrt( max( local_sum_A2 - (local_sum_A.^2)/mn,0) );
 numerator = (xcorr_TA - local_sum_A.*sum(T,1:2)/mn );
 if CTM
 	C = zeros(size(numerator));

@@ -240,7 +240,7 @@
 			}
 		]
 	},
-	"ImageProcessing.Nxc2APostProcess": {
+	"ImageProcessing.Nxc2APostprocess": {
 		"inputs": [
 			{
 				"name": "A",
