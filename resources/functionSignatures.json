@@ -1,4 +1,20 @@
 {
+	"ImageProcessing.FixedPointTform2D":{
+		"inputs":[
+			{
+				"name":"FromPoints",
+				"kind":"required",
+				"type":["real","size=2,:"],
+				"purpose":"变换前的点坐标"
+			},
+			{
+				"name":"ToPoints",
+				"kind":"required",
+				"type":["real","size=2,:"],
+				"purpose":"变换后的点坐标"
+			}
+		]
+	},
 	"ImageProcessing.ImWarp": {
 		"inputs": [
 			{

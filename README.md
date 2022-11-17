@@ -6,6 +6,8 @@ import ImageProcessing.*
 ```
 函数文件内有详细文档，可用doc命令查看。
 ```MATLAB
+%根据变换前后的点XY坐标计算出变换矩阵
+function LeftMatrix = FixedPointTform2D(FromPoints,ToPoints)
 %内置imwarp的升级版，支持3D图像批量变换
 function varargout=ImWarp(Image,varargin)
 %内置normxcorr2的升级版，支持多图批量操作
