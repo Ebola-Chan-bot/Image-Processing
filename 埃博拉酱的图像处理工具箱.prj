@@ -23,7 +23,7 @@ function FDN = Nxc2TPreprocess(Template,SizeA)
 %使用Nxc2TPreprocess的预处理结果计算NormXCorr2
 function C = Nxc2APostprocess(A,SizeT,FDN,Partial)</param.description>
     <param.screenshot>${PROJECT_ROOT}\图形图像处理.png</param.screenshot>
-    <param.version>3.3.1</param.version>
+    <param.version>3.3.2</param.version>
     <param.output>${PROJECT_ROOT}\埃博拉酱的图像处理工具箱.mltbx</param.output>
     <param.products.name>
       <item>Image Processing Toolbox</item>
@@ -32,7 +32,7 @@ function C = Nxc2APostprocess(A,SizeT,FDN,Partial)</param.description>
       <item>17</item>
     </param.products.id>
     <param.products.version>
-      <item>11.6</item>
+      <item>11.7</item>
     </param.products.version>
     <param.platforms />
     <param.guid>6ed47641-adca-4155-9275-8dd7a76e6f85</param.guid>
@@ -130,15 +130,8 @@ resources/project
     </build-deliverables>
     <workflow />
     <matlab>
-      <root>C:\Program Files\MATLAB\R2022b</root>
-      <toolboxes>
-        <toolbox name="matlabcoder" />
-      </toolboxes>
-      <toolbox>
-        <matlabcoder>
-          <enabled>true</enabled>
-        </matlabcoder>
-      </toolbox>
+      <root>C:\Program Files\MATLAB\R2023a</root>
+      <toolboxes />
     </matlab>
     <platform>
       <unix>false</unix>
