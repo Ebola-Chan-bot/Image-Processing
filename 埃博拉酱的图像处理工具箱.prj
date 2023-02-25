@@ -1,5 +1,5 @@
 <deployment-project plugin="plugin.toolbox" plugin-version="1.0">
-  <configuration build-checksum="3167202317" file="C:\Users\vhtmf\Documents\MATLAB\图像处理\埃博拉酱的图像处理工具箱.prj" location="C:\Users\vhtmf\Documents\MATLAB\图像处理" name="埃博拉酱的图像处理工具箱" target="target.toolbox" target-name="打包为工具箱">
+  <configuration build-checksum="3167202317" file="C:\Users\张天夫\Documents\MATLAB\图像处理\埃博拉酱的图像处理工具箱.prj" location="C:\Users\张天夫\Documents\MATLAB\图像处理" name="埃博拉酱的图像处理工具箱" target="target.toolbox" target-name="打包为工具箱">
     <param.appname>埃博拉酱的图像处理工具箱</param.appname>
     <param.authnamewatermark>埃博拉酱</param.authnamewatermark>
     <param.email>vhtmfu@outlook.com</param.email>
@@ -21,9 +21,11 @@ function C=NormXCorr2(template,A,Partial)
 %对NormXCorr2的模板进行预处理
 function FDN = Nxc2TPreprocess(Template,SizeA)
 %使用Nxc2TPreprocess的预处理结果计算NormXCorr2
-function C = Nxc2APostprocess(A,SizeT,FDN,Partial)</param.description>
+function C = Nxc2APostprocess(A,SizeT,FDN,Partial)
+%将两张图叠成一张PNG幻影坦克
+function [Color,Alpha] = MirageTank(BlackImage,WhiteImage,varargin)</param.description>
     <param.screenshot>${PROJECT_ROOT}\图形图像处理.png</param.screenshot>
-    <param.version>3.3.2</param.version>
+    <param.version>3.4.0</param.version>
     <param.output>${PROJECT_ROOT}\埃博拉酱的图像处理工具箱.mltbx</param.output>
     <param.products.name>
       <item>Image Processing Toolbox</item>
@@ -32,7 +34,7 @@ function C = Nxc2APostprocess(A,SizeT,FDN,Partial)</param.description>
       <item>17</item>
     </param.products.id>
     <param.products.version>
-      <item>11.7</item>
+      <item>11.6</item>
     </param.products.version>
     <param.platforms />
     <param.guid>6ed47641-adca-4155-9275-8dd7a76e6f85</param.guid>
@@ -126,11 +128,11 @@ resources/project
     <fileset.depfun.excluded />
     <fileset.package />
     <build-deliverables>
-      <file location="${PROJECT_ROOT}" name="埃博拉酱的图像处理工具箱.mltbx" optional="false">C:\Users\vhtmf\Documents\MATLAB\图像处理\埃博拉酱的图像处理工具箱.mltbx</file>
+      <file location="${PROJECT_ROOT}" name="埃博拉酱的图像处理工具箱.mltbx" optional="false">C:\Users\张天夫\Documents\MATLAB\图像处理\埃博拉酱的图像处理工具箱.mltbx</file>
     </build-deliverables>
     <workflow />
     <matlab>
-      <root>C:\Program Files\MATLAB\R2023a</root>
+      <root>C:\Program Files\MATLAB\R2022b</root>
       <toolboxes />
     </matlab>
     <platform>
