@@ -220,6 +220,54 @@
 			}
 		]
 	},
+	"ImageProcessing.MirageTank":{
+		"inputs":[
+			{
+				"name":"BlackImage",
+				"kind":"required",
+				"type":[["3d","real"],["string","scalar"],["char","row"],["file"]],
+				"purpose":"黑底图数组或文件路径"
+			},
+			{
+				"name":"WhiteImage",
+				"kind":"required",
+				"type":[["3d","real"],["string","scalar"],["char","row"],["file"]],
+				"purpose":"白底图数组或文件路径"
+			},
+			{
+				"mutuallyExclusiveGroup":[
+					[
+						{
+							"name":"OutputPath",
+							"kind":"ordered",
+							"type":[["string","scalar"],["char","row"],["file"]],
+							"purpose":"输出文件路径"
+						},
+						{
+							"name":"UseGpu",
+							"kind":"ordered",
+							"type":["logical","scalar"],
+							"purpose":"是否使用GPU加速计算"
+						}
+					],
+					[
+						{
+							"name":"UseGpu",
+							"kind":"ordered",
+							"type":["logical","scalar"],
+							"purpose":"是否使用GPU加速计算"
+						},
+						{
+							"name":"OutputPath",
+							"kind":"ordered",
+							"type":[["string","scalar"],["char","row"],["file"]],
+							"purpose":"输出文件路径"
+						}
+					]
+				]
+			}
+		]
+	},
 	"ImageProcessing.NormXCorr2": {
 		"inputs": [
 			{

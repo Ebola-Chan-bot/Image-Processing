@@ -16,4 +16,6 @@ function C=NormXCorr2(template,A,Partial)
 function FDN = Nxc2TPreprocess(Template,SizeA)
 %使用Nxc2TPreprocess的预处理结果计算NormXCorr2
 function C = Nxc2APostprocess(A,SizeT,FDN,Partial)
+%将两张图叠成一张PNG幻影坦克
+function [Color,Alpha] = MirageTank(BlackImage,WhiteImage,varargin)
 ```
