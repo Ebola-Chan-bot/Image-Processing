@@ -1,6 +1,6 @@
 埃博拉酱的图像处理工具包，提供一系列 MATLAB Image Processing Toolbox 内置函数所欠缺，但却常用的图像处理功能。
 
-本包中所有函数均在ImageProcessing命名空间下，使用前需import。使用命名空间是一个好习惯，可以有效防止命名冲突，避免编码时不必要的代码提示干扰。
+本包中所有函数均在ImageProcessing命名空间下，使用前需import。
 ```MATLAB
 import ImageProcessing.*
 ```
