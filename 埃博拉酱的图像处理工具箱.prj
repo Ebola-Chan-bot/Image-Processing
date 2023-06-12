@@ -4,7 +4,7 @@
     <param.authnamewatermark>埃博拉酱</param.authnamewatermark>
     <param.email>vhtmfu@outlook.com</param.email>
     <param.company>一致行动党</param.company>
-    <param.summary>对MATLAB图像处理工具箱的扩展</param.summary>
+    <param.summary>对MATLAB图像处理工具箱的扩展。为一些不支持向量化、GPU数组的内置函数，提供支持向量化、GPU的版本。拆分计算normxcorr2以提高性能。将两张图叠加成幻影坦克。</param.summary>
     <param.description>埃博拉酱的图像处理工具包，提供一系列 MATLAB Image Processing Toolbox 内置函数所欠缺，但却常用的图像处理功能。
 
 本包中所有函数均在ImageProcessing命名空间下，使用前需import。使用命名空间是一个好习惯，可以有效防止命名冲突，避免编码时不必要的代码提示干扰。
@@ -12,8 +12,12 @@
 import ImageProcessing.*
 函数文件内有详细文档，可用doc命令查看。
 
+%内置dct2的升级版，支持多维数组和GPU数组
+function arg1=Dct2(varargin)
 %根据变换前后的点XY坐标计算出变换矩阵
 function LeftMatrix = FixedPointTform2D(FromPoints,ToPoints)
+%内置idct2的升级版，支持多维数组和GPU数组
+function a = IDct2(varargin)
 %内置imwarp的升级版，支持3D图像批量变换
 function varargout=ImWarp(Image,varargin)
 %内置normxcorr2的升级版，支持多图批量操作
@@ -24,8 +28,8 @@ function FDN = Nxc2TPreprocess(Template,SizeA)
 function C = Nxc2APostprocess(A,SizeT,FDN,Partial)
 %将两张图叠成一张PNG幻影坦克
 function [Color,Alpha] = MirageTank(BlackImage,WhiteImage,varargin)</param.description>
-    <param.screenshot>${PROJECT_ROOT}\图形图像处理.png</param.screenshot>
-    <param.version>3.4.1</param.version>
+    <param.screenshot>${PROJECT_ROOT}\埃博拉酱的图像处理工具箱.png</param.screenshot>
+    <param.version>3.5.0</param.version>
     <param.output>${PROJECT_ROOT}\埃博拉酱的图像处理工具箱.mltbx</param.output>
     <param.products.name>
       <item>Image Processing Toolbox</item>
@@ -122,7 +126,7 @@ resources/project
       <file>${PROJECT_ROOT}\doc</file>
       <file>${PROJECT_ROOT}\README.md</file>
       <file>${PROJECT_ROOT}\resources</file>
-      <file>${PROJECT_ROOT}\图形图像处理.png</file>
+      <file>${PROJECT_ROOT}\埃博拉酱的图像处理工具箱.png</file>
     </fileset.rootfiles>
     <fileset.depfun.included />
     <fileset.depfun.excluded />

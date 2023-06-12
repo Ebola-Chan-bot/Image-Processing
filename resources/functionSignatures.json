@@ -1,17 +1,147 @@
 {
-	"ImageProcessing.FixedPointTform2D":{
-		"inputs":[
+	"ImageProcessing.Dct2": {
+		"inputs": [
 			{
-				"name":"FromPoints",
-				"kind":"required",
-				"type":["real","size=2,:"],
-				"purpose":"变换前的点坐标"
+				"mutuallyExclusiveGroup": [
+					[
+						{
+							"name": "A",
+							"kind": "required",
+							"type": [
+								[
+									"numerical"
+								],
+								[
+									"logical"
+								]
+							]
+						},
+						{
+							"name": "[M N]",
+							"kind": "ordered",
+							"type": [
+								"numeric",
+								"size=1,2",
+								"vector"
+							]
+						}
+					],
+					[
+						{
+							"name": "A",
+							"kind": "required",
+							"type": [
+								[
+									"numerical"
+								],
+								[
+									"logical"
+								]
+							]
+						},
+						{
+							"name": "M",
+							"kind": "required",
+							"type": [
+								"numeric",
+								"scalar"
+							]
+						},
+						{
+							"name": "N",
+							"kind": "required",
+							"type": [
+								"numeric",
+								"scalar"
+							]
+						}
+					]
+				]
+			}
+		],
+		"outputs": [
+			{
+				"name": "B",
+				"type": "double"
+			}
+		]
+	},
+	"ImageProcessing.FixedPointTform2D": {
+		"inputs": [
+			{
+				"name": "FromPoints",
+				"kind": "required",
+				"type": [
+					"real",
+					"size=2,:"
+				],
+				"purpose": "变换前的点坐标"
 			},
 			{
-				"name":"ToPoints",
-				"kind":"required",
-				"type":["real","size=2,:"],
-				"purpose":"变换后的点坐标"
+				"name": "ToPoints",
+				"kind": "required",
+				"type": [
+					"real",
+					"size=2,:"
+				],
+				"purpose": "变换后的点坐标"
+			}
+		]
+	},
+	"ImageProcessing.IDct2": {
+		"inputs": [
+			{
+				"name": "A",
+				"kind": "required",
+				"type": [
+					"numeric",
+					"2d",
+					"~scalar"
+				]
+			},
+			{
+				"mutuallyExclusiveGroup": [
+					[
+						{
+							"name": "m",
+							"kind": "required",
+							"type": [
+								"numeric",
+								"scalar",
+								"integer",
+								"positive"
+							]
+						},
+						{
+							"name": "n",
+							"kind": "required",
+							"type": [
+								"numeric",
+								"scalar",
+								"integer",
+								"positive"
+							]
+						}
+					],
+					[
+						{
+							"name": "mn",
+							"kind": "required",
+							"type": [
+								"numeric",
+								"size=1,2",
+								"integer",
+								"positive"
+							]
+						}
+					]
+				]
+			}
+		],
+		"outputs": [
+			{
+				"name": "B",
+				"type": "double"
 			}
 		]
 	},
@@ -220,48 +350,110 @@
 			}
 		]
 	},
-	"ImageProcessing.MirageTank":{
-		"inputs":[
+	"ImageProcessing.MirageTank": {
+		"inputs": [
 			{
-				"name":"BlackImage",
-				"kind":"required",
-				"type":[["3d","real"],["string","scalar"],["char","row"],["file"]],
-				"purpose":"黑底图数组或文件路径"
+				"name": "BlackImage",
+				"kind": "required",
+				"type": [
+					[
+						"3d",
+						"real"
+					],
+					[
+						"string",
+						"scalar"
+					],
+					[
+						"char",
+						"row"
+					],
+					[
+						"file"
+					]
+				],
+				"purpose": "黑底图数组或文件路径"
 			},
 			{
-				"name":"WhiteImage",
-				"kind":"required",
-				"type":[["3d","real"],["string","scalar"],["char","row"],["file"]],
-				"purpose":"白底图数组或文件路径"
+				"name": "WhiteImage",
+				"kind": "required",
+				"type": [
+					[
+						"3d",
+						"real"
+					],
+					[
+						"string",
+						"scalar"
+					],
+					[
+						"char",
+						"row"
+					],
+					[
+						"file"
+					]
+				],
+				"purpose": "白底图数组或文件路径"
 			},
 			{
-				"mutuallyExclusiveGroup":[
+				"mutuallyExclusiveGroup": [
 					[
 						{
-							"name":"OutputPath",
-							"kind":"ordered",
-							"type":[["string","scalar"],["char","row"],["file"]],
-							"purpose":"输出文件路径"
+							"name": "OutputPath",
+							"kind": "ordered",
+							"type": [
+								[
+									"string",
+									"scalar"
+								],
+								[
+									"char",
+									"row"
+								],
+								[
+									"file"
+								]
+							],
+							"purpose": "输出文件路径"
 						},
 						{
-							"name":"UseGpu",
-							"kind":"ordered",
-							"type":["logical","scalar"],
-							"purpose":"是否使用GPU加速计算"
+							"name": "UseGpu",
+							"kind": "ordered",
+							"type": [
+								"logical",
+								"scalar"
+							],
+							"purpose": "是否使用GPU加速计算"
 						}
 					],
 					[
 						{
-							"name":"UseGpu",
-							"kind":"ordered",
-							"type":["logical","scalar"],
-							"purpose":"是否使用GPU加速计算"
+							"name": "UseGpu",
+							"kind": "ordered",
+							"type": [
+								"logical",
+								"scalar"
+							],
+							"purpose": "是否使用GPU加速计算"
 						},
 						{
-							"name":"OutputPath",
-							"kind":"ordered",
-							"type":[["string","scalar"],["char","row"],["file"]],
-							"purpose":"输出文件路径"
+							"name": "OutputPath",
+							"kind": "ordered",
+							"type": [
+								[
+									"string",
+									"scalar"
+								],
+								[
+									"char",
+									"row"
+								],
+								[
+									"file"
+								]
+							],
+							"purpose": "输出文件路径"
 						}
 					]
 				]
