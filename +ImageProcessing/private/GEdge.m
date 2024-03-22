@@ -281,14 +281,14 @@ else  % one of the easy methods (roberts,sobel,prewitt)
     if isempty(thresh) % Determine cutoff based on RMS estimate of noise
         % Mean of the magnitude squared image is a
         % value that's roughly proportional to SNR
-        cutoff = scale*mean2(double(b));
+        cutoff = scale*mean(double(b),1:2);
         thresh = sqrt(cutoff);
     else                % Use relative tolerance specified by the user
         cutoff = (thresh).^2;
     end
     
     if thinning
-        e = images.internal.gpu.computeedge(b,bx,by,kx,ky,isroberts,100*eps,gather(cutoff));
+        e = MATLAB.DataTypes.ArrayFun(@(b,bx,by,cutoff)images.internal.gpu.computeedge(b,bx,by,kx,ky,isroberts,100*eps,cutoff),b,bx,by,gather(cutoff),Dimension=1:2,CatMode=MATLAB.Flags.CanCat);
     else
         e = b > cutoff;
     end
