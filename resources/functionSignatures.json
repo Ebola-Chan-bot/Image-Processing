@@ -66,6 +66,16 @@
 			}
 		]
 	},
+	"ImageProcessing.Edge": {
+		"inputs": [
+			{
+				"name": "I",
+				"kind": "required",
+				"type": "real",
+				"purpose": "图像数组"
+			}
+		]
+	},
 	"ImageProcessing.FixedPointTform2D": {
 		"inputs": [
 			{

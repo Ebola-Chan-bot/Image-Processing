@@ -8,6 +8,8 @@ import ImageProcessing.*
 ```MATLAB
 %内置dct2的升级版，支持多维数组和GPU数组
 function arg1=Dct2(varargin)
+%内置edge的升级版，支持任意维度图像数组（但只在前两维计算边缘）
+function [eout,thresh,gv_45,gh_135] = Edge(varargin)
 %根据变换前后的点XY坐标计算出变换矩阵
 function LeftMatrix = FixedPointTform2D(FromPoints,ToPoints)
 %内置idct2的升级版，支持多维数组和GPU数组
