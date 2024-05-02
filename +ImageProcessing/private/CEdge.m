@@ -248,7 +248,7 @@ if strcmp(method,'canny')
 
     % Perform Non-Maximum Suppression Thining and Hysteresis Thresholding of Edge
     % Strength
-    e = thinAndThreshold(dx, dy, magGrad, lowThresh, highThresh);
+    e = MATLAB.DataTypes.ArrayFun(@thinAndThreshold,dx, dy, magGrad, lowThresh, highThresh,Dimension=1:2,CatMode=MATLAB.Flags.EsNlcs);
     thresh = [lowThresh highThresh];
 
 elseif strcmp(method,'approxcanny')
@@ -607,7 +607,6 @@ function H = thinAndThreshold(dx, dy, magGrad, lowThresh, highThresh)
 
 % We will accrue indices which specify ON pixels in strong edgemap
 % The array e will become the weak edge map.
-
 E = images.internal.builtins.cannyFindLocalMaxima(dx,dy,magGrad,lowThresh);
 
 if ~isempty(E)
