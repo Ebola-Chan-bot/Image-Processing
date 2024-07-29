@@ -98,6 +98,28 @@
 			}
 		]
 	},
+	"ImageProcessing.Gif2Video": {
+		"inputs": [
+			{
+				"name": "GifPath",
+				"kind": "required",
+				"type": [
+					[
+						"string",
+						"scalar"
+					],
+					[
+						"char",
+						"row"
+					],
+					[
+						"file=*.gif"
+					]
+				],
+				"purpose": "GIF文件路径"
+			}
+		]
+	},
 	"ImageProcessing.IDct2": {
 		"inputs": [
 			{
@@ -357,6 +379,25 @@
 						}
 					]
 				]
+			}
+		]
+	},
+	"ImageProcessing.Ind2Rgb": {
+		"inputs": [
+			{
+				"name": "Index",
+				"kind": "required",
+				"type": "real",
+				"purpose": "索引图像"
+			},
+			{
+				"name": "Map",
+				"kind": "required",
+				"type": [
+					"size=:,3",
+					"real"
+				],
+				"purpose": "与索引图像Index相关联的颜色图"
 			}
 		]
 	},
