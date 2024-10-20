@@ -12,6 +12,8 @@ function arg1=Dct2(varargin)
 function BW=Edge(I)
 %根据变换前后的点XY坐标计算出变换矩阵
 function LeftMatrix = FixedPointTform2D(FromPoints,ToPoints)
+%对隐函数在指定范围内作图
+function [Line,Scatter]=FPlot(Func,MinX,MaxX,MinY,MaxY,Step,options)
 %将GIF多帧图像读入为RGB视频
 function [Video,FrameRate] = Gif2Video(GifPath)
 %内置idct2的升级版，支持多维数组和GPU数组

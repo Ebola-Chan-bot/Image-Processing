@@ -98,6 +98,85 @@
 			}
 		]
 	},
+	"ImageProcessing.FPlot": {
+		"inputs": [
+			{
+				"name": "Func",
+				"kind": "required",
+				"type": "function_handle",
+				"purpose": "要绘制的函数"
+			},
+			{
+				"name": "MinX",
+				"kind": "required",
+				"type": [
+					"real",
+					"scalar"
+				],
+				"purpose": "X轴的最小值"
+			},
+			{
+				"name": "MaxX",
+				"kind": "required",
+				"type": [
+					"real",
+					"scalar"
+				],
+				"purpose": "X轴的最大值"
+			},
+			{
+				"name": "MinY",
+				"kind": "required",
+				"type": [
+					"real",
+					"scalar"
+				],
+				"purpose": "Y轴的最小值"
+			},
+			{
+				"name": "MaxY",
+				"kind": "required",
+				"type": [
+					"real",
+					"scalar"
+				],
+				"purpose": "Y轴的最大值"
+			},
+			{
+				"name": "Step",
+				"kind": "required",
+				"type": "positive",
+				"purpose": "采样步距"
+			},
+			{
+				"name": "LineThreshold",
+				"kind": "namevalue",
+				"type": "positive",
+				"purpose": "点线阈值"
+			},
+			{
+				"name": "Continuous",
+				"kind": "namevalue",
+				"type": [
+					"logical",
+					"scalar"
+				],
+				"purpose": "连续性假设"
+			},
+			{
+				"name": "LineStyle",
+				"kind": "namevalue",
+				"type": "cell",
+				"purpose": "线条样式"
+			},
+			{
+				"name": "ScatterStyle",
+				"kind": "namevalue",
+				"type": "cell",
+				"purpose": "散点样式"
+			}
+		]
+	},
 	"ImageProcessing.Gif2Video": {
 		"inputs": [
 			{
