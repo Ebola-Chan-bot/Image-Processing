@@ -1,7 +1,7 @@
 function V = Version
-V.Me='v3.8.0';
+V.Me='v3.9.0';
 V.MatlabExtension='v18.2.0';
-V.MATLAB='R2022b';
+V.MATLAB='R2026a';
 persistent NewVersion
 try
 	if isempty(NewVersion)

@@ -690,5 +690,51 @@
 				"purpose": "目标图像尺寸。"
 			}
 		]
+	},
+	"ImageProcessing.Video2Gif": {
+		"inputs": [
+			{
+				"name": "VideoPath",
+				"kind": "required",
+				"type": [
+					[
+						"string",
+						"scalar"
+					],
+					[
+						"char",
+						"row"
+					]
+				],
+				"purpose": "视频文件路径"
+			},
+			{
+				"name": "GifPath",
+				"kind": "required",
+				"type": [
+					[
+						"string",
+						"scalar"
+					],
+					[
+						"char",
+						"row"
+					]
+				],
+				"purpose": "输出GIF文件路径"
+			},
+			{
+				"name": "Scale",
+				"kind": "namevalue",
+				"type": "positive",
+				"purpose": "缩放比例"
+			},
+			{
+				"name":"CropRange",
+				"kind":"namevalue",
+				"type":["cell","size=1,3"],
+				"purpose":"裁剪范围"
+			}
+		]
 	}
 }
