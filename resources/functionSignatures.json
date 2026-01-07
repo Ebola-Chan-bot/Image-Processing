@@ -76,6 +76,19 @@
 			}
 		]
 	},
+	"ImageProcessing.FitGeoTForm2D": {
+		"inputs": [
+			{
+				"name": "Points",
+				"kind": "required",
+				"type": [
+					"real",
+					"size=:,2,2"
+				],
+				"purpose": "变换前后对应的点坐标"
+			}
+		]
+	},
 	"ImageProcessing.FixedPointTform2D": {
 		"inputs": [
 			{

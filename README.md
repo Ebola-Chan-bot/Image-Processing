@@ -12,6 +12,9 @@ function arg1=Dct2(varargin)
 %内置edge的升级版，支持任意维度图像数组（但只在前两维计算边缘），支持GPU数组
 function BW=Edge(I)
 
+%内置fitgeotform2d的升级版，根据输入点数自动选择合适的变换方案
+function TForm2D = FitGeoTForm2D(Points)
+
 %根据变换前后的点XY坐标计算出变换矩阵
 function LeftMatrix = FixedPointTform2D(FromPoints,ToPoints)
 
