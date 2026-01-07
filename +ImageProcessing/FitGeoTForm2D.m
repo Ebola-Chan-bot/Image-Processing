@@ -26,11 +26,11 @@ elseif NumPoints<4
 elseif NumPoints<6
 	TForm2D=fitgeotform2d(Points(:,:,1),Points(:,:,2),'projective');
 elseif NumPoints<10
-	TForm2D=fitgeotform2d(Points(:,:,1),Points(:,:,2),'polynomial','Degree',2);
+	TForm2D=fitgeotform2d(Points(:,:,1),Points(:,:,2),'polynomial',2);
 elseif NumPoints<15
-	TForm2D=fitgeotform2d(Points(:,:,1),Points(:,:,2),'polynomial','Degree',3);
+	TForm2D=fitgeotform2d(Points(:,:,1),Points(:,:,2),'polynomial',3);
 else
-	TForm2D=fitgeotform2d(Points(:,:,1),Points(:,:,2),'polynomial','Degree',4);
+	TForm2D=fitgeotform2d(Points(:,:,1),Points(:,:,2),'polynomial',4);
 end
 end
 
