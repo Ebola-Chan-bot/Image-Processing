@@ -18,7 +18,7 @@
 function TForm2D = FitGeoTForm2D(Points)
 NumPoints=height(Points);
 if NumPoints<2
-	TForm2D=simtform2d([1,0,0;0,1,0;Points(:,:,2)-Points(:,:,1),1]);
+	TForm2D=simtform2d([1,0,0;0,1,0;Points(:,:,2)-Points(:,:,1),1].');
 elseif NumPoints<3
 	TForm2D=fitgeotform2d(Points(:,:,1),Points(:,:,2),'similarity');
 elseif NumPoints<4
