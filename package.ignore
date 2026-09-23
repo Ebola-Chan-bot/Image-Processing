@@ -15,20 +15,22 @@
 
 % Notes:
 % - If a path starts with '%', include '\' before '%', for example, "\%examplefile.svn".
-% - This file, 'toolbox.ignore', is always excluded from the toolbox and including it is not supported.
+% - This file, 'package.ignore', is always excluded from the toolbox and including it is not supported.
 
 %% Recommended Exclusions (remove lines to re-include files):
 
-% Version control history
-.git*
+% Exclude source control files
+**/.git*
 **/*.svn
 
 % Toolbox files and project files
 **/*.mltbx
 **/*.prj
+**/matlab.toml
 
 % Backup files
 **/*.asv
+**/*.m~
 **/*.prj.bak
 
 % Local MATLAB/Simulink tool caches
@@ -40,3 +42,4 @@ resources/project
 工具箱图像.png
 deploymentLog.html
 resources/9*
+README.md
